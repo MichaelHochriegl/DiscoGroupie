@@ -1,4 +1,4 @@
-namespace Bot;
+namespace DiscoGroupie.UI.Bot;
 
 public class Worker : BackgroundService
 {

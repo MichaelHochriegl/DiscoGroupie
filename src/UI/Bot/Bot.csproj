@@ -6,6 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>dotnet-Bot-ED038F6C-D093-4121-AF03-DD7950D58ED7</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>DiscoGroupie.UI.Bot</RootNamespace>
+        <AssemblyName>DiscoGroupie.UI.Bot</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

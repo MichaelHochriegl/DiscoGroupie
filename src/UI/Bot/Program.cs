@@ -1,4 +1,4 @@
-using Bot;
+using DiscoGroupie.UI.Bot;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services => { services.AddHostedService<Worker>(); })
