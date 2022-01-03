@@ -1,5 +1,7 @@
 using DiscoGroupie.Infrastructure.Discord;
+using DiscoGroupie.Infrastructure.Persistence;
 using DiscoGroupie.UI.Bot;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var configuration = new ConfigurationBuilder()
@@ -20,16 +22,16 @@ try
         .ConfigureServices(services =>
         {
             // services.AddHostedService<Worker>();
-            // services.AddPersistence(configuration);
+            services.AddPersistence(configuration);
         })
         .SetupDiscord()
         .Build();
     
-    // using (var scope = host.Services.CreateScope())
-    // {
-    //     var db = scope.ServiceProvider.GetRequiredService<DiscoGroupieNpsqlDbContext>();
-    //     db.Database.Migrate();
-    // }
+    using (var scope = host.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<DiscoGroupieNpsqlDbContext>();
+        db.Database.Migrate();
+    }
 
     await host.RunAsync();
 }

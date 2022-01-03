@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot", "src\UI\Bot\Bot.cspro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discord", "src\Infrastructure\Discord\Discord.csproj", "{743D79B1-CFDF-43E3-B046-0DC336810D9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "src\Infrastructure\Persistence\Persistence.csproj", "{119401C9-B09B-4D1C-A5B2-718A67323904}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,7 @@ Global
 		{87B3D2B8-F9FD-464A-87E5-060C07D10D66} = {82C9CFAD-DED5-49CA-B0C9-26AA28C21628}
 		{1C3AF96C-C92B-4B8C-9F08-1A3ADEFC92F0} = {C1BC292D-9C0A-411D-AE39-3551D0312341}
 		{743D79B1-CFDF-43E3-B046-0DC336810D9B} = {D9FA4E50-D2FA-4B36-89D0-42E55757E649}
+		{119401C9-B09B-4D1C-A5B2-718A67323904} = {D9FA4E50-D2FA-4B36-89D0-42E55757E649}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{87B3D2B8-F9FD-464A-87E5-060C07D10D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +45,9 @@ Global
 		{743D79B1-CFDF-43E3-B046-0DC336810D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{743D79B1-CFDF-43E3-B046-0DC336810D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{743D79B1-CFDF-43E3-B046-0DC336810D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{119401C9-B09B-4D1C-A5B2-718A67323904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{119401C9-B09B-4D1C-A5B2-718A67323904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{119401C9-B09B-4D1C-A5B2-718A67323904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{119401C9-B09B-4D1C-A5B2-718A67323904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
