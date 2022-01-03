@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>DiscoGroupie.Infrastructure.Discord</RootNamespace>
+        <AssemblyName>DiscoGroupie.Infrastructure.Discord</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Discord.Addons.Hosting" Version="5.0.0" />
+        <PackageReference Include="Discord.Net" Version="3.1.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    </ItemGroup>
+
+</Project>
