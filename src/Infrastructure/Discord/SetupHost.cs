@@ -19,7 +19,8 @@ public static class SetupHost
             {
                 LogLevel = LogSeverity.Verbose,
                 AlwaysDownloadUsers = true,
-                MessageCacheSize = 200
+                MessageCacheSize = 200,
+                GatewayIntents = GatewayIntents.All
             };
 
             config.Token = context.Configuration.GetValue<string>("DiscordBotSettings:Token");

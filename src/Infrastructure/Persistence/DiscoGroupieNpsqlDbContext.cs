@@ -7,13 +7,14 @@ namespace DiscoGroupie.Infrastructure.Persistence;
 public class DiscoGroupieNpsqlDbContext : DbContext, IDiscoGroupDbContext
 {
     public DbSet<Guild> Guilds { get; set; }
+    public DbSet<Group> Groups { get; set; }
 
     public DiscoGroupieNpsqlDbContext(DbContextOptions options) : base(options)
     {
         
     }
     
-    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+    public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
         var result = await base.SaveChangesAsync(cancellationToken);
 

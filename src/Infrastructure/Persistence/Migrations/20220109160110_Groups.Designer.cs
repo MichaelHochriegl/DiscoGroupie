@@ -2,6 +2,7 @@
 using DiscoGroupie.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -10,9 +11,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DiscoGroupie.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(DiscoGroupieNpsqlDbContext))]
-    partial class DiscoGroupieNpsqlDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220109160110_Groups")]
+    partial class Groups
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

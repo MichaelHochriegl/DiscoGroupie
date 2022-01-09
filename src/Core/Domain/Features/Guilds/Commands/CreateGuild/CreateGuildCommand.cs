@@ -38,6 +38,7 @@ public class CreateGuildCommandHandler : IRequestHandler<CreateGuildCommand, Res
             request.GroupTextSectionId,
             request.GroupVoiceSectionId);
 
+        _dbContext.Guilds.Add(guild);
         await _dbContext.SaveChangesAsync(cancellationToken);
         
         return Result<Guild>.Success(guild);

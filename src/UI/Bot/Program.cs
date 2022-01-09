@@ -1,3 +1,4 @@
+using DiscoGroupie.Core.Domain;
 using DiscoGroupie.Infrastructure.Discord;
 using DiscoGroupie.Infrastructure.Persistence;
 using DiscoGroupie.UI.Bot;
@@ -22,6 +23,7 @@ try
         .ConfigureServices(services =>
         {
             // services.AddHostedService<Worker>();
+            services.AddDomainCore();
             services.AddPersistence(configuration);
         })
         .SetupDiscord()

@@ -9,9 +9,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Discord.Addons.Hosting" Version="5.0.0" />
-        <PackageReference Include="Discord.Net" Version="3.1.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Domain\Domain.csproj" />
     </ItemGroup>
 
 </Project>

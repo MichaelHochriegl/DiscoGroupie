@@ -17,7 +17,7 @@ public static class DependencyInjection
             options.UseNpgsql(connectionString, opt => 
                 opt.MigrationsAssembly(typeof(DiscoGroupieNpsqlDbContext).Assembly.FullName));
         });
-        services.AddTransient<IDiscoGroupDbContext, DiscoGroupieNpsqlDbContext>();
+        services.AddScoped<IDiscoGroupDbContext, DiscoGroupieNpsqlDbContext>();
 
         return services;
     }
