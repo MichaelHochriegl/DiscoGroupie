@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  discogroupie:
+    env_file: .env
+    image: ${DOCKER_REGISTRY-}discogroupie
+    build:
+      context: .
+      dockerfile: src/UI/Bot/Dockerfile
+    environment:
+      - "ApplicationSettings__UsedConnectionString=Container"
+      - "DiscordBotSettings__Token=${TOKEN}"
+      - "DiscordBotSettings__Prefix=!dg "
+      - "ConnectionStrings__Container=Server=db;Port=5432;Database=postgres;User Id=${DBUSER};Password=${DBPASSWORD};"
+    depends_on:
+      - db
+    restart: on-failure
+
+  db:
+    env_file: .env
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DBUSER}
+      POSTGRES_PASSWORD: ${DBPASSWORD}
+
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080
