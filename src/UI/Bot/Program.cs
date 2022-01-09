@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var configuration = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json")
-    .AddJsonFile("appsettings.Development.json")
+    .AddJsonFile("appsettings.json", false, true)
+    .AddJsonFile("appsettings.Development.json", optional: true, true)
     .AddEnvironmentVariables()
     .Build();
 
